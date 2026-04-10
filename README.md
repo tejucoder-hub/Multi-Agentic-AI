@@ -706,9 +706,7 @@ Ji et al. (2022) — Knowledge representation, informing the shared memory and k
 17. Ji, S., et al. (2022). A Survey on Knowledge Graphs. *IEEE TNNLS*, vol. 33, no. 2, pp. 494–514.
 18. He, X., Zhao, K., & Chu, X. (2021). AutoML: A Survey of the State-of-the-Art. *Knowledge-Based Systems*, vol. 212, art. 106622.
 19. Bzdok, D., Yeo, B. T. T., & Poldrack, R. A. (2024). Data Science Opportunities of LLMs for Neuroscience and Biomedicine. *Neuron*, vol. 112, no. 5, pp. 698–717.
-20. Dhakad, S. (2022). Bank Customer Churn Prediction. Kaggle. [https://www.kaggle.com/datasets/shubhammeshram579/bank-customer-churn-prediction
-](https://www.kaggle.com/datasets/shantanudhakadd/bank-customer-churn-
-prediction?utm_source)
+20. Dhakad, S. (2022). Bank Customer Churn Prediction. Kaggle. https://www.kaggle.com/datasets/shantanudhakadd/bank-customer-churn-prediction
 ---
 
 *README authored for dissertation submission — Ulster University Final Year Project 2025/26*
