@@ -680,7 +680,7 @@ Ji et al. (2022) — Knowledge representation, informing the shared memory and k
 
 - **Supervisor**: Muhammed Sihan Haroon, Ulster University / QA
 - **Institution**: Ulster University, United Kingdom
-- **Dataset**: Bank Customer Churn Prediction — Shubham Dhakad (Kaggle, 2022)
+- **Dataset**: Bank Customer Churn Prediction — Shubham Dhakad (Kaggle, 2022) (For DataScience Project Testing)
 - **Framework Credits**: LangChain, LangGraph, Streamlit, H2O.ai, MLflow communities
 
 ---
