@@ -161,6 +161,8 @@ sync_memory_and_kb()    → Updates shared_memory + knowledge_base
 ### 4.2 Research Agent Workspace (`research_core/`)
 
 A dedicated academic knowledge discovery environment.
+<img width="1536" height="1024" alt="ChatGPT Image Apr 10, 2026, 05_37_14 PM" src="https://github.com/user-attachments/assets/3b60ed96-684b-4f53-8969-487e954b9a28" />
+
 
 #### File Responsibilities
 
@@ -187,114 +189,14 @@ A dedicated academic knowledge discovery environment.
 | `web_search_tool.py` | Supplementary web search tool integration |
 | `evaluation.py` | Research response quality evaluation utilities |
 
-### 4.3 Adaptive RAG Pipeline
 
-This is the intellectual core of the Research Agent. It runs as a **sequential stateful workflow**:
-
-```
-                    ┌─────────────────────────────────────────┐
-                    │         User Research Query              │
-                    └────────────────┬────────────────────────┘
-                                     │
-                                     ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                     AdaptiveRAGState (TypedDict)                       │
-│  user_query  validated_query  refined_query  retrieval_queries         │
-│  retrieved_documents  relevant_documents  discarded_documents          │
-│  final_answer  confidence_note  retry_count  needs_refinement          │
-│  memory_notes  retrieval_error  refinement_reason                      │
-└────────────────────────────────────────────────────────────────────────┘
-                                     │
-                                     ▼
-                    ┌────────────────────────────────┐
-                    │   STEP 1: validate_query_node   │
-                    │                                │
-                    │  • Strip filler phrases         │
-                    │    ("what is", "tell me about") │
-                    │  • Flag short queries for       │
-                    │    refinement                   │
-                    │  • Set needs_refinement flag    │
-                    └────────────────┬───────────────┘
-                                     │
-                                     ▼
-                    ┌────────────────────────────────┐
-                    │  STEP 2: retrieve_documents     │
-                    │         _node                  │
-                    │                                │
-                    │  • URL-encode query             │
-                    │  • GET arXiv API                │
-                    │    (sortBy=relevance, max=5)    │
-                    │  • Parse Atom XML → dicts       │
-                    │    {title, abstract, authors,   │
-                    │     published, pdf_link, link}  │
-                    └────────────────┬───────────────┘
-                                     │
-                                     ▼
-                    ┌────────────────────────────────┐
-                    │  STEP 3: grade_documents_node  │
-                    │                                │
-                    │  • Tokenise query + docs        │
-                    │  • Expand acronyms              │
-                    │    (RAG→retrieval augmented,    │
-                    │     LLM→large language model)   │
-                    │  • Score title + abstract       │
-                    │  • Filter relevant vs           │
-                    │    discarded documents          │
-                    └────────────────┬───────────────┘
-                                     │
-                          needs_refinement? ──YES──►┐
-                                     │              │
-                                     NO             ▼
-                                     │  ┌──────────────────────────┐
-                                     │  │ STEP 3b: refine_query    │
-                                     │  │                          │
-                                     │  │ • Domain-specific        │
-                                     │  │   expansion (RAG, agents,│
-                                     │  │   transformers, etc.)    │
-                                     │  │ • Re-retrieve + re-grade │
-                                     │  │   (max 1 retry)          │
-                                     │  └────────────┬─────────────┘
-                                     │               │
-                                     ◄───────────────┘
-                                     │
-                                     ▼
-                    ┌────────────────────────────────┐
-                    │  STEP 4: generate_answer_node  │
-                    │                                │
-                    │  • Build context from           │
-                    │    relevant_documents           │
-                    │  • LLM completion (OpenAI/      │
-                    │    Ollama) grounded on evidence │
-                    │  • Confidence note generation   │
-                    └────────────────┬───────────────┘
-                                     │
-                                     ▼
-                    ┌────────────────────────────────┐
-                    │  STEP 5: save_memory_node      │
-                    │                                │
-                    │  • Persist memory_notes to      │
-                    │    shared_memory_store.json     │
-                    └────────────────┬───────────────┘
-                                     │
-                                     ▼
-                    ┌────────────────────────────────┐
-                    │   Final Response to User UI     │
-                    │   • Grounded answer             │
-                    │   • Retrieved paper cards       │
-                    │   • Confidence note             │
-                    │   • Citation-aware output       │
-                    └────────────────────────────────┘
-```
-
-#### RAG Configuration (`config.py`)
+#### 4.3 RAG Configuration (`config.py`)
 
 | Parameter | Default | Purpose |
 |---|---|---|
 | `RAG_PROVIDER` | `openai` | `openai` or `ollama` |
 | `OPENAI_CHAT_MODEL` | `gpt-4.1` | LLM for answer generation |
 | `OPENAI_EMBED_MODEL` | `text-embedding-3-small` | Embedding model |
-| `OLLAMA_CHAT_MODEL` | `qwen2.5` | Local LLM fallback |
-| `OLLAMA_EMBED_MODEL` | `nomic-embed-text` | Local embedding model |
 | `TOP_K` | `3` | Number of top documents to use |
 | `CHUNK_SIZE` | `600` | Characters per text chunk |
 | `CHUNK_OVERLAP` | `100` | Overlap between chunks |
@@ -302,6 +204,12 @@ This is the intellectual core of the Research Agent. It runs as a **sequential s
 ### 4.4 Data Science Agent Workspace (`ds_core/`)
 
 A fully structured analytical environment for tabular data workflows. Built on a modular `ai_data_science_team` package.
+
+#### Data Science Workflow
+
+
+<img width="1536" height="1024" alt="ChatGPT Image Apr 10, 2026, 05_39_25 PM" src="https://github.com/user-attachments/assets/b45740e7-2310-4045-8569-5429c8b06a66" />
+
 
 ```
 ds_core/
@@ -365,97 +273,7 @@ ds_core/
     └── northwind.db                    SQLite Northwind database (SQL agent)
 ```
 
-#### Data Science Workflow
 
-```
-      ┌──────────────────────────────────────────┐
-      │           User Uploads CSV / selects      │
-      │           sample dataset                  │
-      └────────────────────┬─────────────────────┘
-                           │
-                           ▼
-      ┌──────────────────────────────────────────┐
-      │  DATA EXPLORER TAB                        │
-      │                                           │
-      │  1. Dataset Input & Loading               │
-      │     data_loader_tools_agent               │
-      │     • CSV / XLSX / SQLite upload          │
-      │     • Schema profiling                    │
-      │                                           │
-      │  2. Data Inspection                       │
-      │     • Shape, dtypes, null counts          │
-      │     • Sample rows, value distributions    │
-      │                                           │
-      │  3. Data Cleaning                         │
-      │     data_cleaning_agent                   │
-      │     • Missing value imputation            │
-      │     • Format normalisation                │
-      │     • Duplicate removal                   │
-      │                                           │
-      │  4. Summary Statistics                    │
-      │     eda_tools_agent                       │
-      │                                           │
-      │  5. Missing Value Analysis                │
-      │                                           │
-      │  6. Visual Analysis                       │
-      │     data_visualization_agent             │
-      │     • Histograms, scatter plots           │
-      │     • Correlation heatmaps, bar charts    │
-      └────────────────────┬─────────────────────┘
-                           │
-                           ▼
-      ┌──────────────────────────────────────────┐
-      │  FEATURE ENGINEERING TAB                  │
-      │                                           │
-      │     feature_engineering_agent             │
-      │     • Label encoding / One-hot encoding   │
-      │     • Standard scaling                    │
-      │     • Feature selection                   │
-      │     • data_wrangling_agent transformations│
-      └────────────────────┬─────────────────────┘
-                           │
-                           ▼
-      ┌──────────────────────────────────────────┐
-      │  MODELLING STUDIO TAB                     │
-      │                                           │
-      │  Model Selection:                         │
-      │     • Logistic Regression                 │
-      │     • Random Forest                       │
-      │     • Gradient Boosting                   │
-      │     • XGBoost                             │
-      │     • Linear Regression                   │
-      │     • H2O AutoML (h2o_ml_agent)           │
-      │                                           │
-      │  Train/Test Split: 80:20 (configurable)   │
-      │                                           │
-      │  Pipeline execution:                      │
-      │     utils/pipeline.py                     │
-      │     sandbox.py (safe code exec)           │
-      └────────────────────┬─────────────────────┘
-                           │
-                           ▼
-      ┌──────────────────────────────────────────┐
-      │  EVALUATION TAB                           │
-      │                                           │
-      │     model_evaluation_agent                │
-      │     • Accuracy, Precision, Recall, F1     │
-      │     • ROC-AUC, Confusion Matrix           │
-      │     • MLflow experiment logging           │
-      │       (mlflow_tools_agent)                │
-      │     • Evaluation summary export           │
-      └──────────────────────────────────────────┘
-                           │
-                           │  (runs in parallel throughout)
-                           ▼
-      ┌──────────────────────────────────────────┐
-      │  CHAT STUDIO (always available)           │
-      │                                           │
-      │     supervisor_ds_team                    │
-      │     → pandas_data_analyst                 │
-      │     → sql_data_analyst                    │
-      │     Dataset-aware conversational queries  │
-      └──────────────────────────────────────────┘
-```
 
 ---
 
