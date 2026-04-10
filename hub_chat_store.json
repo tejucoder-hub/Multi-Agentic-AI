@@ -1,0 +1,74 @@
+{
+  "current_chat_id": "45473a19-dd10-4775-8a06-63cc81c0ad14",
+  "openai_model": "gpt-4.1-mini",
+  "chats": {
+    "82b25683-9211-43fd-883f-5a71e49ff1d0": {
+      "title": "hi",
+      "messages": [
+        {
+          "role": "assistant",
+          "content": "Hello! I’m your Multi-Agentic AI assistant. How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "hi "
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I assist you today?"
+        },
+        {
+          "role": "user",
+          "content": "what is social sicence "
+        },
+        {
+          "role": "assistant",
+          "content": "Social science is the study of human society and social relationships. It encompasses various disciplines that examine how people interact, organize, and influence each other within communities and societies. Key fields within social science include sociology, psychology, anthropology, economics, political science, and human geography. The goal of social science is to understand social behavior, cultural norms, economic systems, political structures, and other aspects of human life to explain and sometimes predict social phenomena. If you'd like, I can provide more detailed information or examples from specific social science disciplines!"
+        },
+        {
+          "role": "user",
+          "content": "can you give me reseach paper on that ? "
+        },
+        {
+          "role": "assistant",
+          "content": "This looks like a research-related request. Please open the Research Agent for papers, citations, PDF summaries, and grounded research answers."
+        },
+        {
+          "role": "user",
+          "content": "ok thank you "
+        },
+        {
+          "role": "assistant",
+          "content": "You're welcome! If you have any other questions or need assistance, feel free to ask."
+        }
+      ],
+      "created_at": "2026-03-27 11:21:01"
+    },
+    "45473a19-dd10-4775-8a06-63cc81c0ad14": {
+      "title": "what is generative ai",
+      "messages": [
+        {
+          "role": "assistant",
+          "content": "Hello! I’m your Multi-Agentic AI assistant. How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what is generative ai "
+        },
+        {
+          "role": "assistant",
+          "content": "Generative AI refers to a category of artificial intelligence systems designed to create new content, such as text, images, audio, or code, that resembles human-made data. Unlike traditional AI that might classify or analyze data, generative AI models learn patterns from existing data and use that knowledge to generate novel outputs. Examples include language models like GPT, image generators like DALL·E, and music composition AI. Generative AI is widely used for creative tasks, content creation, data augmentation, and more. If you'd like, I can provide more detailed explanations or examples!"
+        },
+        {
+          "role": "user",
+          "content": "give me a latest reseach paper of generative ai "
+        },
+        {
+          "role": "assistant",
+          "content": "This looks like a research-related request. Please open the Research Agent for papers, citations, PDF summaries, and grounded research answers."
+        }
+      ],
+      "created_at": "2026-03-27 11:57:03"
+    }
+  }
+}
