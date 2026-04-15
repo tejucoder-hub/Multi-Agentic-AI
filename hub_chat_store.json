@@ -1,5 +1,5 @@
 {
-  "current_chat_id": "45473a19-dd10-4775-8a06-63cc81c0ad14",
+  "current_chat_id": "49570f26-97eb-41c2-9ad1-341a9ffb28e2",
   "openai_model": "gpt-4.1-mini",
   "chats": {
     "82b25683-9211-43fd-883f-5a71e49ff1d0": {
@@ -44,31 +44,15 @@
       ],
       "created_at": "2026-03-27 11:21:01"
     },
-    "45473a19-dd10-4775-8a06-63cc81c0ad14": {
-      "title": "what is generative ai",
+    "49570f26-97eb-41c2-9ad1-341a9ffb28e2": {
+      "title": "New Chat",
       "messages": [
         {
           "role": "assistant",
           "content": "Hello! I’m your Multi-Agentic AI assistant. How can I help you today?"
-        },
-        {
-          "role": "user",
-          "content": "what is generative ai "
-        },
-        {
-          "role": "assistant",
-          "content": "Generative AI refers to a category of artificial intelligence systems designed to create new content, such as text, images, audio, or code, that resembles human-made data. Unlike traditional AI that might classify or analyze data, generative AI models learn patterns from existing data and use that knowledge to generate novel outputs. Examples include language models like GPT, image generators like DALL·E, and music composition AI. Generative AI is widely used for creative tasks, content creation, data augmentation, and more. If you'd like, I can provide more detailed explanations or examples!"
-        },
-        {
-          "role": "user",
-          "content": "give me a latest reseach paper of generative ai "
-        },
-        {
-          "role": "assistant",
-          "content": "This looks like a research-related request. Please open the Research Agent for papers, citations, PDF summaries, and grounded research answers."
         }
       ],
-      "created_at": "2026-03-27 11:57:03"
+      "created_at": "2026-04-15 11:41:06"
     }
   }
 }
