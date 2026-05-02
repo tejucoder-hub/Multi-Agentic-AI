@@ -6,7 +6,7 @@
 
 ---
 
-## 📑 Table of Contents
+##  Table of Contents
 
 1. [Project Overview](#-project-overview)
 2. [Academic Context](#-academic-context)
@@ -28,7 +28,7 @@
 
 ---
 
-## 🧭 Project Overview
+##  Project Overview
 
 **MainHub** is a unified, multi-agent AI chatbot system built as a dissertation-level final year project at Ulster University. It addresses a well-identified gap in the literature: existing intelligent assistants either support *research knowledge discovery* **or** *data science workflows* — but never both, in one coherent, continuous environment.
 
@@ -40,7 +40,7 @@ This system solves that by implementing **three tightly coordinated agent worksp
 | **Research Agent Workspace** | Academic knowledge discovery via Adaptive RAG + arXiv + PDF analysis |
 | **Data Science Agent Workspace** | End-to-end analytical pipeline: load → clean → EDA → model → evaluate |
 
-### ✅ Key Achievements
+###  Key Achievements
 
 - Integrated multi-agent architecture with shared session state and persistent JSON storage
 - Adaptive RAG pipeline: query validation → arXiv retrieval → relevance grading → answer generation
@@ -52,7 +52,7 @@ This system solves that by implementing **three tightly coordinated agent worksp
 
 ---
 
-## 🎓 Academic Context
+##  Academic Context
 
 ### Research Problem
 
@@ -132,7 +132,7 @@ General Chat       Research Workspace    Data Science Workspace
 
 ---
 
-## 🔬 Module Deep-Dive
+##  Module Deep-Dive
 
 ### 4.1 Main ChatHub Application (`app.py`)
 
@@ -277,7 +277,7 @@ ds_core/
 
 ---
 
-## 📁 Project File Structure
+##  Project File Structure
 
 ```
 mainhub/
@@ -411,7 +411,7 @@ mainhub/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 
@@ -552,7 +552,7 @@ python test_run.py
 
 ---
 
-## 📊 Evaluation & Results
+##  Evaluation & Results
 
 ### Research Agent — Qualitative Performance
 
