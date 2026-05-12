@@ -34,7 +34,7 @@ These tasks are currently siloed across separate tools — literature tools, cod
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 ### High-Level Overview
 
