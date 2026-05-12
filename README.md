@@ -16,15 +16,7 @@ This system solves that by implementing **three tightly coordinated agent worksp
 | **Research Agent Workspace** | Academic knowledge discovery via Adaptive RAG + arXiv + PDF analysis |
 | **Data Science Agent Workspace** | End-to-end analytical pipeline: load → clean → EDA → model → evaluate |
 
-###  Key Achievements
 
-- Integrated multi-agent architecture with shared session state and persistent JSON storage
-- Adaptive RAG pipeline: query validation → arXiv retrieval → relevance grading → answer generation
-- Data Science workspace with H2O AutoML, scikit-learn, XGBoost, MLflow integration
-- Benchmark classification (Churn dataset, 10,000 records): **85.65% accuracy, 0.8314 F1-score**
-- Dual LLM backend support: **OpenAI GPT-4.1** and **Ollama (local, e.g. qwen2.5)**
-- Multimodal support: PDF upload & summarisation, image generation, image analysis
-- Exportable research outputs (LaTeX/PDF) and analytical artefacts
 
 ---
 
@@ -38,15 +30,7 @@ Modern knowledge workers frequently need to:
 
 These tasks are currently siloed across separate tools — literature tools, coding notebooks, ML platforms. This creates friction, reduces continuity, and weakens efficiency.
 
-### Research Questions
 
-- Can a unified multi-agent architecture support both research knowledge discovery and data science workflows without compromising modularity?
-- Does an Adaptive RAG mode produce more evidence-grounded outputs than standard conversational interaction?
-- Can a coordinated multi-agent system achieve competitive ML performance on benchmark analytical tasks?
-
-### Contribution
-
-This project presents a **proof-of-concept unified architecture** demonstrating that specialised agents, when properly orchestrated, can deliver coherent heterogeneous knowledge support within a single interactive system — filling a gap identified across the RAG, multi-agent, and AI-for-data-science literatures.
 
 ---
 
