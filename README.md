@@ -4,30 +4,6 @@
 >
 > Final Year Project — Ulster University | Student: Tejas Rajeshbhai Patel (B01035879) | Supervisor: Muhammed Sihan Haroon
 
----
-
-##  Table of Contents
-
-1. [Project Overview](#-project-overview)
-2. [Academic Context](#-academic-context)
-3. [System Architecture](#-system-architecture)
-4. [Module Deep-Dive](#-module-deep-dive)
-   - [Main ChatHub](#41-main-chathub-applicationapypy)
-   - [Research Agent Workspace](#42-research-agent-workspace-research_core)
-   - [Adaptive RAG Pipeline](#43-adaptive-rag-pipeline)
-   - [Data Science Agent Workspace](#44-data-science-agent-workspace-ds_core)
-5. [Project File Structure](#-project-file-structure)
-6. [Technology Stack](#-technology-stack)
-7. [Installation & Setup](#-installation--setup)
-8. [Configuration](#-configuration)
-9. [Running the Application](#-running-the-application)
-10. [Evaluation & Results](#-evaluation--results)
-11. [Research Foundations](#-research-foundations)
-12. [Limitations & Future Work](#-limitations--future-work)
-13. [References](#-references)
-
----
-
 ##  Project Overview
 
 **MainHub** is a unified, multi-agent AI chatbot system built as a dissertation-level final year project at Ulster University. It addresses a well-identified gap in the literature: existing intelligent assistants either support *research knowledge discovery* **or** *data science workflows* — but never both, in one coherent, continuous environment.
