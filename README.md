@@ -577,33 +577,7 @@ Adaptive RAG Mode (Evidence-Grounded)
 
 ---
 
-##  Research Foundations
 
-This project draws on and implements ideas from the following key areas of literature:
-
-### Large Language Models
-Brown et al. (2020) — GPT-3 demonstrated few-shot reasoning at scale, establishing the modern LLM paradigm that underpins both agents in this system.
-
-### Retrieval-Augmented Generation (RAG)
-Lewis et al. (2020) — Original RAG paper: the foundation for the Research Agent's evidence-grounded answer generation. The Adaptive RAG in this system extends RAG with query validation, relevance grading, and auto-refinement.
-
-### Self-RAG
-Asai et al. (2024) — Self-reflective retrieval, generate, and critique. Informed the adaptive retry loop in the Adaptive RAG workflow.
-
-### Chain-of-Thought Prompting
-Wei et al. (2022) — Structured reasoning prompting, influencing agent template design.
-
-### Multi-Agent Systems
-- Li et al. (2023) — CAMEL: communicative agents for collaborative task solving
-- Hong et al. (2024) — MetaGPT: meta-programming for multi-agent frameworks
-- Wang et al. (2024) — Survey on LLM-based autonomous agents
-
-### AI for Data Science
-- Ma et al. (2023) — InsightPilot: LLM-empowered automated data exploration
-- Guo et al. (2024) — DS-Agent: data science via case-based reasoning
-
-### Knowledge Graphs & Memory
-Ji et al. (2022) — Knowledge representation, informing the shared memory and knowledge base design.
 
 ---
 
