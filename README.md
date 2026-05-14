@@ -6,7 +6,7 @@
 
 ##  Project Overview
 
-**MainHub** is a unified, multi-agent AI chatbot system built as a dissertation-level final year project at Ulster University. It addresses a well-identified gap in the literature: existing intelligent assistants either support *research knowledge discovery* **or** *data science workflows* — but never both, in one coherent, continuous environment.
+**MainHub** is a unified, multi-agent AI chatbot system built as a  final year project at Ulster University. It addresses a well-identified gap in the literature: existing intelligent assistants either support *research knowledge discovery* **or** *data science workflows* — but never both, in one coherent, continuous environment.
 
 This system solves that by implementing **three tightly coordinated agent workspaces** within a single Streamlit application:
 
