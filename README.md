@@ -324,7 +324,7 @@ mainhub/
 
 ---
 
-## 🛠 Technology Stack
+##  Technology Stack
 
 ### Core Framework
 
@@ -638,29 +638,6 @@ Ji et al. (2022) — Knowledge representation, informing the shared memory and k
 
 
 
-## 📖 References
-
-1. Brown, T. B., et al. (2020). Language Models are Few-Shot Learners. *NeurIPS*, vol. 33, pp. 1877–1901.
-2. Lewis, P., et al. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. *NeurIPS*, vol. 33, pp. 9459–9474.
-3. Vaswani, A., et al. (2017). Attention Is All You Need. *NeurIPS*, vol. 30, pp. 5998–6008.
-4. Yao, S., et al. (2023). ReAct: Synergizing Reasoning and Acting in Language Models. *ICLR 2023*.
-5. Asai, A., et al. (2024). Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. *ICLR 2024*.
-6. Wei, J., et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. *NeurIPS*, vol. 35, pp. 24824–24837.
-7. Devlin, J., et al. (2019). BERT: Pre-training of Deep Bidirectional Transformers. *NAACL-HLT*, vol. 1, pp. 4171–4186.
-8. Schick, T., et al. (2023). Toolformer: Language Models Can Teach Themselves to Use Tools. *NeurIPS*, vol. 36, pp. 68539–68551.
-9. Li, G., et al. (2023). CAMEL: Communicative Agents for 'Mind' Exploration of Large Language Model Society. *NeurIPS*, vol. 36, pp. 51991–52008.
-10. Hong, S., et al. (2024). MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework. *ICLR 2024*.
-11. Wang, L., et al. (2024). A Survey on Large Language Model Based Autonomous Agents. *Frontiers of Computer Science*, vol. 18, no. 6.
-12. Park, J. S., et al. (2023). Generative Agents: Interactive Simulacra of Human Behavior. *UIST 2023*, pp. 1–22.
-13. Ma, P., et al. (2023). InsightPilot: An LLM-Empowered Automated Data Exploration System. *EMNLP 2023*, pp. 346–352.
-14. Guo, S., et al. (2024). DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning. *ICML 2024*, vol. 235, pp. 16813–16848.
-15. Karpukhin, V., et al. (2020). Dense Passage Retrieval for Open-Domain Question Answering. *EMNLP 2020*, pp. 6769–6781.
-16. Guu, K., et al. (2020). REALM: Retrieval-Augmented Language Model Pre-Training. *ICML 2020*, vol. 119, pp. 3929–3938.
-17. Ji, S., et al. (2022). A Survey on Knowledge Graphs. *IEEE TNNLS*, vol. 33, no. 2, pp. 494–514.
-18. He, X., Zhao, K., & Chu, X. (2021). AutoML: A Survey of the State-of-the-Art. *Knowledge-Based Systems*, vol. 212, art. 106622.
-19. Bzdok, D., Yeo, B. T. T., & Poldrack, R. A. (2024). Data Science Opportunities of LLMs for Neuroscience and Biomedicine. *Neuron*, vol. 112, no. 5, pp. 698–717.
-20. Dhakad, S. (2022). Bank Customer Churn Prediction. Kaggle. https://www.kaggle.com/datasets/shantanudhakadd/bank-customer-churn-prediction
----
 
 *README authored for dissertation submission — Ulster University Final Year Project 2025/26*
 *Student: Tejas Rajeshbhai Patel (B01035879) | Supervisor: Muhammed Sihan Haroon*
